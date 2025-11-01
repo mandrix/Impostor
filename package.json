@@ -1,27 +1,69 @@
 {
   "name": "impostor-game",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "description": "Juego multijugador del impostor desarrollado con Next.js 15",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "dev": "next dev",
+    "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "next lint",
+    "type-check": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "deploy": "vercel --prod"
   },
   "dependencies": {
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
-    "next": "15.5.1"
+    "@chakra-ui/react": "^2.8.2",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@hookform/resolvers": "^3.3.2",
+    "@popperjs/core": "^2.11.8",
+    "@radix-ui/react-dialog": "^1.0.5",
+    "@radix-ui/react-dropdown-menu": "^2.0.6",
+    "@radix-ui/react-select": "^2.0.0",
+    "@radix-ui/react-tabs": "^1.0.4",
+    "@radix-ui/react-toast": "^1.1.5",
+    "@supabase/supabase-js": "^2.56.0",
+    "@types/uuid": "^10.0.0",
+    "clsx": "^2.0.0",
+    "framer-motion": "^10.16.4",
+    "lucide-react": "^0.294.0",
+    "next": "15.5.1",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-hook-form": "^7.48.2",
+    "socket.io-client": "^4.7.2",
+    "tailwind-merge": "^2.0.0",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3.0.0",
     "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
-    "eslint": "^9",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/socket.io-client": "^3.0.0",
+    "autoprefixer": "^10.0.1",
+    "eslint": "^8",
     "eslint-config-next": "15.5.1",
-    "@eslint/eslintrc": "^3"
-  }
+    "postcss": "^8",
+    "prettier": "^3.0.3",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "impostor",
+    "game",
+    "multijugador",
+    "nextjs",
+    "react",
+    "typescript",
+    "chakra-ui",
+    "tailwind"
+  ],
+  "author": "Mandrix",
+  "license": "MIT"
 }

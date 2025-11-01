@@ -1,0 +1,65 @@
+[
+  {
+    "id": "campeones_lol",
+    "name": "Campeones de League of Legends",
+    "words": [
+      "Ashe", "Garen", "Ahri", "Lux", "Teemo", "Yasuo", "Zed", "Thresh", 
+      "Jinx", "Darius", "Leona", "Morgana", "Katarina", "Riven", "Vayne",
+      "Lee Sin", "Ezreal", "Sona", "Kha'Zix", "Rengar", "Fizz", "Orianna"
+    ]
+  },
+  {
+    "id": "amigos_cartago",
+    "name": "Amigos de Cartago",
+    "words": [
+      "Josue", "Ale", "Gringo", "Alejo", "Briam", "Jeffry", "Kevin", 
+      "Crist", "Edwin", "Yorsh"
+    ]
+  },
+  {
+    "id": "videojuegos_famosos",
+    "name": "Videojuegos Famosos",
+    "words": [
+      "Minecraft", "Fortnite", "GTA V", "Among Us", "Zelda", "Mario Kart",
+      "Call of Duty", "FIFA", "Red Dead Redemption", "The Witcher", "Skyrim",
+      "Fallout", "Assassin's Creed", "God of War", "Spider-Man"
+    ]
+  },
+  {
+    "id": "comida_rapida",
+    "name": "Comida Rápida",
+    "words": [
+      "Pizza", "Hamburguesa", "Taco", "Sushi", "Perro caliente", "Pollo frito",
+      "Papas fritas", "Nuggets", "Burrito", "Quesadilla", "Empanada",
+      "Arepa", "Tamal", "Ceviche", "Pasta"
+    ]
+  },
+  {
+    "id": "peliculas_marvel",
+    "name": "Películas de Marvel",
+    "words": [
+      "Iron Man", "Thor", "Hulk", "Black Panther", "Doctor Strange",
+      "Spider-Man", "Captain America", "Black Widow", "Scarlet Witch",
+      "Vision", "Ant-Man", "Guardians of the Galaxy", "Avengers",
+      "Deadpool", "X-Men"
+    ]
+  },
+  {
+    "id": "deportes",
+    "name": "Deportes",
+    "words": [
+      "Fútbol", "Basketball", "Tennis", "Baseball", "Volleyball",
+      "Golf", "Boxeo", "MMA", "Nadar", "Correr", "Ciclismo",
+      "Esquí", "Snowboard", "Surf", "Skateboarding"
+    ]
+  },
+  {
+    "id": "musica",
+    "name": "Música",
+    "words": [
+      "Rock", "Pop", "Hip Hop", "Jazz", "Blues", "Country", "Reggae",
+      "Salsa", "Merengue", "Bachata", "Cumbia", "Reggaeton", "Electrónica",
+      "Clásica", "Folk", "R&B"
+    ]
+  }
+]
