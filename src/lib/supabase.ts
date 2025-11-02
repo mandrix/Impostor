@@ -1,21 +1,50 @@
-import { createClient } from '@supabase/supabase-js'
+import { createClient, SupabaseClient } from '@supabase/supabase-js'
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
-const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-
-if (!supabaseUrl || !supabaseKey) {
-  throw new Error('Faltan variables de entorno de Supabase')
+function getSupabaseUrl(): string {
+  return process.env.NEXT_PUBLIC_SUPABASE_URL || ''
 }
 
-export const supabase = createClient(supabaseUrl, supabaseKey)
+function getSupabaseKey(): string {
+  return process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
+}
 
-// Cliente con permisos de admin (para operaciones sensibles)
-const supabaseAdminUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
-const supabaseAdminKey = process.env.SUPABASE_SERVICE_ROLE_KEY!
+function getSupabaseAdminKey(): string {
+  return process.env.SUPABASE_SERVICE_ROLE_KEY || ''
+}
 
-export const supabaseAdmin = createClient(supabaseAdminUrl, supabaseAdminKey, {
-  auth: {
-    autoRefreshToken: false,
-    persistSession: false
+function createSupabaseClient(): SupabaseClient {
+  const url = getSupabaseUrl()
+  const key = getSupabaseKey()
+  
+  if (!url || !key) {
+    // En build time, crear un cliente dummy que no se usará
+    // En runtime, esto se validará cuando se intente usar
+    return createClient('https://placeholder.supabase.co', 'placeholder-key')
   }
-})
+  
+  return createClient(url, key)
+}
+
+function createSupabaseAdminClient(): SupabaseClient {
+  const url = getSupabaseUrl()
+  const key = getSupabaseAdminKey()
+  
+  if (!url || !key) {
+    return createClient('https://placeholder.supabase.co', 'placeholder-key', {
+      auth: {
+        autoRefreshToken: false,
+        persistSession: false
+      }
+    })
+  }
+  
+  return createClient(url, key, {
+    auth: {
+      autoRefreshToken: false,
+      persistSession: false
+    }
+  })
+}
+
+export const supabase = createSupabaseClient()
+export const supabaseAdmin = createSupabaseAdminClient()

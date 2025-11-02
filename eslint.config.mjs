@@ -1,3 +1,4 @@
+// @ts-check
 import { dirname } from 'path'
 import { fileURLToPath } from 'url'
 import { FlatCompat } from '@eslint/eslintrc'
@@ -9,13 +10,10 @@ const compat = new FlatCompat({
   baseDirectory: __dirname,
 })
 
-const eslintConfig = [
-  ...compat.config({
-    extends: ['next/core-web-vitals'],
-  }),
+export default [
+  ...compat.extends('next/core-web-vitals'),
   {
     rules: {
-      // Reglas personalizadas para el proyecto
       '@typescript-eslint/no-unused-vars': 'warn',
       '@typescript-eslint/no-explicit-any': 'warn',
       'prefer-const': 'error',
@@ -23,5 +21,3 @@ const eslintConfig = [
     },
   },
 ]
-
-export default eslintConfig
